@@ -87,7 +87,7 @@ public class Phone {
 	@Override
 	public String toString() {
 		return "You just created your custom phone by using phone builder \nHere is the configuration \nPhone [os=" + os + ", cpu=" + cpu + ", ram=" + ram + ", memory=" + memory + ", screenSize=" + screenSize
-				+ ", battery=" + battery + ", doubleSim=" + hasDoubleSim + "]";
+				+ ", battery=" + battery + ", hasDoubleSim=" + hasDoubleSim + "]";
 	}
 	
 	
