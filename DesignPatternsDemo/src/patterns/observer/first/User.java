@@ -2,6 +2,7 @@ package patterns.observer.first;
 
 public class User implements IObserver {
 	private String name;
+	//A way to access concrete observable in case we need to find out about the change that occured inside of it
 	private Observable observable;
 
 	public void update(int discount)

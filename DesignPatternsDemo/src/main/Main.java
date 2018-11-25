@@ -1,5 +1,10 @@
 package main;
 
+import patterns.adapter.FormatAdapter;
+import patterns.adapter.IMediaPlayer;
+import patterns.adapter.MP3;
+import patterns.adapter.MP4;
+import patterns.adapter.VLC;
 import patterns.builder.Phone;
 import patterns.factory.GameEngineFactory;
 import patterns.factory.IGameEngine;
@@ -64,9 +69,19 @@ public class Main
 		u1.unsubscribe();
 		divider();
 		
+		//Adapter
+		IMediaPlayer player = new MP3();
+		player.play("Thunderstruck-ACDC.mp3");
+		
+		player = new FormatAdapter(new MP4());
+		player.play("Prison Song-SOAD.mp4");
+		
+		player = new FormatAdapter(new VLC());
+		player.play("No Quarter-Led Zeppelin.vlc");
+		divider();
+		
 	}
-	
-	
+		
 	private static void divider()
 	{
 		System.out.println("==================================================");
